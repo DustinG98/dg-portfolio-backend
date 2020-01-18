@@ -24,6 +24,10 @@ connection.once('open', () => {
     console.log('MongoDB database connected established')
 })
 
+const authRouter = require('./routes/auth')
+
+app.use('/api/auth', authRouter)
+
 app.listen(port, () => {
     console.log('connected')
 })

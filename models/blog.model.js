@@ -10,7 +10,20 @@ const blogSchema = new Schema({
         trim: true,
         min: 3
     },
-    posts: []
+    section: {
+        type: String,
+        required: true,
+        trim: true,
+        min: 3
+    },
+    imageSource: {
+        type: String,
+        required: true,
+    },
+    body: {
+        type: String,
+        required: true
+    }
 }, {
     timestamps: true,
 })

@@ -20,8 +20,8 @@ const blogSchema = new Schema({
         type: String,
         required: true,
     },
-    body: {
-        type: String,
+    content: {
+        type: Object,
         required: true
     }
 }, {

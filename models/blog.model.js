@@ -6,7 +6,6 @@ const blogSchema = new Schema({
     title: {
         type: String,
         required: true,
-        unique: true,
         trim: true,
         min: 3
     },
@@ -22,6 +21,10 @@ const blogSchema = new Schema({
     },
     content: {
         type: Object,
+        required: true
+    },
+    username: {
+        type: String,
         required: true
     }
 }, {

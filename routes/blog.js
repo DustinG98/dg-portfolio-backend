@@ -16,7 +16,8 @@ blog.route('/').post(verify, (req, res) => {
     const section = req.body.section;
     const imageSource = req.body.imageSource;
     const content = req.body.content;
-    const newBlogSection = new Blog({ title, section, imageSource, content })
+    const username = req.body.username;
+    const newBlogSection = new Blog({ title, section, imageSource, content, username })
 
     newBlogSection.save()
         .then(() => res.json('Post Added!'))
